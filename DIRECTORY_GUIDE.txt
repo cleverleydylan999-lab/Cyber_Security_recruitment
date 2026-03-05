@@ -1,0 +1,374 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                          DIRECTORY USAGE GUIDE                              ║
+║              What Goes Where in Your Organized Project                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+�� ROOT DIRECTORY (/)
+══════════════════════════════════════════════════════════════════════════════
+Location: /workspaces/Cyber_Security_recruitment/
+
+Contents:
+  ✓ index.html                    → Main landing page (entry point)
+  ✓ ORGANIZATION_COMPLETE.txt     → Completion report
+  ✓ ORGANIZATION_SUMMARY.md       → Changes summary
+  ✓ FILES_ORGANIZED.md            → Quick reference guide
+  ✓ DIRECTORY_GUIDE.txt           → This file
+
+Purpose: Root level contains only:
+  • Main index.html page
+  • Top-level documentation
+  • Configuration files (when needed)
+
+Never put here:
+  ✗ CSS files (use css/)
+  ✗ JavaScript files (use js/)
+  ✗ Page files (use pages/)
+
+
+📂 CSS DIRECTORY (/css)
+══════════════════════════════════════════════════════════════════════════════
+Location: /workspaces/Cyber_Security_recruitment/css/
+
+Contents:
+  ✓ styles.css                    → 1403 lines of complete styling
+
+Purpose: Central stylesheet repository
+  • Single source of truth for styling
+  • Serves all 13 HTML pages
+  • Responsive design for all breakpoints
+  • All component styles in one place
+
+What to put here:
+  ✓ CSS stylesheets
+  ✓ SCSS files (if using)
+  ✓ CSS variables and themes
+
+Never put here:
+  ✗ JavaScript files
+  ✗ HTML pages
+  ✗ Images or media
+
+
+📂 JAVASCRIPT DIRECTORY (/js)
+══════════════════════════════════════════════════════════════════════════════
+Location: /workspaces/Cyber_Security_recruitment/js/
+
+Contents:
+  ✓ script.js                     → Core functionality (500+ lines)
+  ✓ job-detail.js                 → Job page interactions (180 lines)
+  ✓ benefit-detail.js             → Benefit page animations (120 lines)
+  ✓ security-tester.js            → Security & performance (850+ lines)
+
+Purpose: Centralized JavaScript repository
+  • script.js → Loaded on ALL pages
+  • job-detail.js → Loaded on /pages/jobs/ pages only
+  • benefit-detail.js → Loaded on /pages/benefits/ pages only
+  • security-tester.js → Loaded on ALL pages for security
+
+What to put here:
+  ✓ JavaScript files
+  ✓ Utility scripts
+  ✓ Helper functions
+
+Never put here:
+  ✗ CSS files
+  ✗ HTML pages
+  ✗ Documentation
+
+
+📂 PAGES DIRECTORY (/pages)
+══════════════════════════════════════════════════════════════════════════════
+Location: /workspaces/Cyber_Security_recruitment/pages/
+
+Sub-directories:
+  ├── jobs/                       → Job detail pages
+  └── benefits/                   → Benefit detail pages
+
+Purpose: Organized storage for all HTML pages except index.html
+
+What goes here:
+  ✓ Page-specific HTML files
+  ✓ Pages grouped by category
+  ✓ Sub-directories by type
+
+
+📂 JOBS DIRECTORY (/pages/jobs)
+══════════════════════════════════════════════════════════════════════════════
+Location: /workspaces/Cyber_Security_recruitment/pages/jobs/
+
+Contents (6 job detail pages):
+  ✓ job-security-analyst.html
+  ✓ job-penetration-tester.html
+  ✓ job-security-engineer.html
+  ✓ job-soc-technician.html
+  ✓ job-threat-intelligence-lead.html
+  ✓ job-compliance-officer.html
+
+Purpose: Individual pages for each job opportunity
+  • Detailed job descriptions
+  • CV submission forms
+  • Required skills
+  • Company culture info
+  • Benefits overview
+
+File references (relative paths):
+  Stylesheet:  ../../css/styles.css
+  Scripts:     ../../js/script.js
+              ../../js/job-detail.js
+              ../../js/security-tester.js
+  Back link:   ../../index.html
+
+How to add a new job:
+  1. Copy existing job-*.html file
+  2. Update job details and requirements
+  3. Ensure paths are ../../
+  4. Link from index.html opportunities section
+
+
+📂 BENEFITS DIRECTORY (/pages/benefits)
+══════════════════════════════════════════════════════════════════════════════
+Location: /workspaces/Cyber_Security_recruitment/pages/benefits/
+
+Contents (6 benefit detail pages):
+  ✓ career-growth.html
+  ✓ elite-team.html
+  ✓ innovation-hub.html
+  ✓ competitive-pay.html
+  ✓ global-impact.html
+  ✓ continuous-learning.html
+
+Purpose: Individual pages for each company benefit
+  • Detailed benefit explanations
+  • Testimonials from employees
+  • Program details
+  • Career advancement info
+  • Compensation breakdown
+
+File references (relative paths):
+  Stylesheet:  ../../css/styles.css
+  Scripts:     ../../js/script.js
+              ../../js/benefit-detail.js
+              ../../js/security-tester.js
+  Back link:   ../../index.html
+
+How to add a new benefit:
+  1. Copy existing benefit HTML file
+  2. Update benefit details and testimonials
+  3. Ensure paths are ../../
+  4. Link from index.html why-us section
+
+
+�� DOCUMENTATION DIRECTORY (/docs)
+══════════════════════════════════════════════════════════════════════════════
+Location: /workspaces/Cyber_Security_recruitment/docs/
+
+Contents (15+ documentation files):
+  ✓ README.md                     → Main project documentation
+  ✓ FILE_STRUCTURE.md             → Complete organization guide
+  ✓ QUICKSTART.md                 → 5-minute quick start
+  ✓ TECHNICAL.md                  → Technical specifications
+  ✓ SECURITY_FEATURES.md          → Security & performance guide
+  ✓ DEPLOYMENT_CHECKLIST.md       → Pre-launch checklist
+  ✓ FEATURES.md                   → Feature documentation
+  ✓ PSYCHOLOGY.md                 → Design psychology
+  ✓ PROJECT_COMPLETE.md           → Project status
+  ✓ START_HERE.md                 → Initial setup
+  ✓ QUICKSTART.md                 → 5-minute guide
+  ✓ WEBSITE_MAP.txt              → Navigation diagram
+  ✓ COMPLETION_SUMMARY.txt        → Completion details
+  └── (Additional guides)
+
+Purpose: Comprehensive documentation repository
+  • User guides
+  • Technical documentation
+  • Deployment instructions
+  • Feature documentation
+  • Architecture guides
+
+What to put here:
+  ✓ .md markdown files
+  ✓ .txt text files
+  ✓ Documentation
+  ✓ Guides and tutorials
+
+Never put here:
+  ✗ Code files
+  ✗ HTML pages (except docs)
+  ✗ Media files
+
+
+📂 ASSETS DIRECTORY (/assets)
+══════════════════════════════════════════════════════════════════════════════
+Location: /workspaces/Cyber_Security_recruitment/assets/
+
+Current: Empty (ready for media)
+
+Purpose: Future static media repository
+  • Images for pages
+  • Icons and logos
+  • Fonts (if not using CDN)
+  • Videos or media
+  • Downloads/files
+
+What to put here:
+  ✓ PNG, JPG, SVG images
+  ✓ Icon files
+  ✓ Font files
+  ✓ Media files
+  ✓ Downloadable PDFs
+
+Never put here:
+  ✗ HTML pages
+  ✗ CSS files
+  ✗ JavaScript files
+  ✗ Documentation
+
+
+🔗 RELATIVE PATH REFERENCE
+══════════════════════════════════════════════════════════════════════════════
+
+From Root (index.html):
+  CSS:          <link href="css/styles.css">
+  Script:       <script src="js/script.js">
+  Job:          <a href="pages/jobs/job-analyst.html">
+  Benefit:      <a href="pages/benefits/career-growth.html">
+
+From /pages/jobs/job-*.html:
+  CSS:          <link href="../../css/styles.css">
+  Script:       <script src="../../js/script.js">
+  Home:         <a href="../../index.html">
+  Doc:          <a href="../../docs/README.md">
+
+From /pages/benefits/*.html:
+  CSS:          <link href="../../css/styles.css">
+  Script:       <script src="../../js/script.js">
+  Home:         <a href="../../index.html">
+  Doc:          <a href="../../docs/README.md">
+
+From /docs/:
+  Home:         <a href="../index.html">
+  CSS:          <link href="../css/styles.css">
+  Page:         <a href="../pages/jobs/job-analyst.html">
+
+
+📊 FILE ORGANIZATION SUMMARY
+══════════════════════════════════════════════════════════════════════════════
+
+Root Directory:
+  • 1 HTML file (index.html)
+  • 0 CSS files
+  • 0 JS files
+  • 3 docs at root level
+
+Total: 4 files at root
+
+css/ Directory:
+  • 1 CSS file (styles.css - 1403 lines)
+
+Total: 1 file
+
+js/ Directory:
+  • 4 JavaScript files (1200+ lines)
+
+Total: 4 files
+
+pages/ Directory:
+  • 13 HTML files (pages/jobs/ + pages/benefits/)
+
+Total: 13 files (in sub-directories)
+
+docs/ Directory:
+  • 15+ documentation files
+
+Total: 15+ files
+
+assets/ Directory:
+  • 0 files (ready for media)
+
+GRAND TOTAL: 39 files organized
+
+
+✨ BEST PRACTICES
+══════════════════════════════════════════════════════════════════════════════
+
+✓ Always use relative paths (../../)
+✓ Keep stylesheet centralized
+✓ Group related JavaScript files
+✓ Organize pages by category
+✓ Document all changes
+✓ Update docs when adding features
+✓ Use consistent naming (kebab-case)
+✓ Test links after moving files
+✓ Use version control (Git)
+
+
+🚀 WORKFLOW EXAMPLE
+══════════════════════════════════════════════════════════════════════════════
+
+Adding a New Job Opportunity:
+
+1. Create file:    pages/jobs/job-new-title.html
+2. Add stylesheet: <link href="../../css/styles.css">
+3. Add scripts:    <script src="../../js/script.js">
+                   <script src="../../js/job-detail.js">
+4. Update:         index.html opportunities section
+5. Add link:       <a href="pages/jobs/job-new-title.html">
+6. Document:       Update docs/README.md
+7. Test locally:   python -m http.server 8000
+8. Verify links:   Check console (F12)
+9. Commit:         git add -A && git commit -m "Add new job"
+
+
+📋 CHECKLIST FOR NEW FILES
+══════════════════════════════════════════════════════════════════════════════
+
+Adding CSS:
+  ☑ Add to css/styles.css (don't create new files)
+  ☑ Test all breakpoints
+  ☑ Verify no conflicts
+
+Adding JavaScript:
+  ☑ Add to existing js/ files or create new one
+  ☑ Update HTML script references
+  ☑ Test functionality
+  ☑ Check console for errors
+
+Adding HTML Pages:
+  ☑ Create in pages/[category]/
+  ☑ Use relative paths for links (../../)
+  ☑ Include all required scripts
+  ☑ Link from appropriate index/parent page
+  ☑ Test navigation
+  ☑ Verify mobile responsive
+
+Adding Documentation:
+  ☑ Create in docs/
+  ☑ Use .md for markdown
+  ☑ Update docs/README.md
+  ☑ Use clear headings
+  ☑ Include code examples
+
+
+🎯 SUMMARY
+══════════════════════════════════════════════════════════════════════════════
+
+Your project is organized with:
+  ✓ Central CSS (css/)
+  ✓ Modular JavaScript (js/)
+  ✓ Categorized Pages (pages/)
+  ✓ Comprehensive Docs (docs/)
+  ✓ Relative paths throughout
+  ✓ Professional structure
+
+Result: A scalable, maintainable, professional codebase!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                     Directory Organization Guide
+                    All files organized and documented
+                     Ready for development and deployment
+
+                    Created by GitHub Copilot - March 5, 2026
+═══════════════════════════════════════════════════════════════════════════════
+
